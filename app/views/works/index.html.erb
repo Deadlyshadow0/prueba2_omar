@@ -8,6 +8,8 @@
 	usuario: <%= works.user.name %>
 	<br>
 	categoria: <%= works.inventory.category.name %>
+	<br>
+	<%= link_to 'Delete', work_path(works), :method => :delete %>
 	</p>
 
 <% end %>

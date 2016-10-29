@@ -7,7 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user = User.create([{name: 'Rodrigo', email: 'ro@hotmail.com'},{name: 'Omar', email: 'omar@hotmail.com'}])
-
-Work.create(description: 'trabajo facil1', user: User.first)
-Work.create(description: 'trabajo facil2', user: User.last)
-Work.create(description: 'trabajo facil3', user: User.last)
+category = Category.create(:name => 'C1')
+inventory = Inventory.create(:serial => 'serial', :size => 5, :description => 'd', :category => category)
+Work.create(description: 'trabajo facil1', user: User.first, :inventory => inventory)
+Work.create(description: 'trabajo facil2', user: User.last, :inventory => inventory)
+Work.create(description: 'trabajo facil3', user: User.last, :inventory => inventory)

@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  serial: MyString
+  serial: MyStringONE
   size: 1
   description: MyText
-  category_id: 
+  category_id: :one
 
 two:
-  serial: MyString
-  size: 1
+  serial: MyStringTWO
+  size: 0
   description: MyText
+  category_id: :two
+
+three:
+  serial: serial
+  size: 10
+  description: description
   category_id: 

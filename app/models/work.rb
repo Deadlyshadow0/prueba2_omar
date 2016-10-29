@@ -8,7 +8,7 @@ class Work < ActiveRecord::Base
   scope :no_item, -> {where(:inventory => nil)}
 
   def validates_user
-  	if self.user_id.nill?
+  	if self.user_id.nil?
   		errors.add(:user_id, 'is required')
   	else
   		if User.where(:id => self.user_id).size == 0
